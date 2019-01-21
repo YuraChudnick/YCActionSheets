@@ -8,12 +8,64 @@
 
 /* Begin PBXBuildFile section */
 		CD00349221E8B78E0078810C /* YCActionSheets.h in Headers */ = {isa = PBXBuildFile; fileRef = CD00349021E8B78E0078810C /* YCActionSheets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD00349921E8B8820078810C /* YCActionSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00349821E8B8820078810C /* YCActionSheetVC.swift */; };
+		CD00349B21E8BDA70078810C /* YCActionSheetDatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00349A21E8BDA70078810C /* YCActionSheetDatePickerVC.swift */; };
+		CDE84AB521F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB421F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift */; };
+		CDE84AB721F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB621F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift */; };
+		CDE84AB921F1C45400F63AC3 /* YCTextPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB821F1C45400F63AC3 /* YCTextPickerView.swift */; };
+		CDE8878B21E8C0100020CB1D /* YCDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8878A21E8C0100020CB1D /* YCDatePickerView.swift */; };
+		CDE8878D21E8C0570020CB1D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8878C21E8C0570020CB1D /* UIView+Extensions.swift */; };
+		CDE8878F21E8C2060020CB1D /* YCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8878E21E8C2060020CB1D /* YCButton.swift */; };
+		CDE8879121E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8879021E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift */; };
+		CDE8879321E8C7970020CB1D /* YCActionSheetSelectFilialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8879221E8C7970020CB1D /* YCActionSheetSelectFilialVC.swift */; };
+		CDE8879921E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8879821E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift */; };
+		CDE8879B21E8CB6E0020CB1D /* YCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8879A21E8CB6E0020CB1D /* YCView.swift */; };
+		CDE8879D21E8D1EC0020CB1D /* YCSelectFilialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8879C21E8D1EC0020CB1D /* YCSelectFilialView.swift */; };
+		CDE887A321EC90100020CB1D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887A221EC90100020CB1D /* Utils.swift */; };
+		CDE887A521EC95A80020CB1D /* YCSelectFilialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887A421EC95A80020CB1D /* YCSelectFilialCell.swift */; };
+		CDE887BA21EE05970020CB1D /* plus_ic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE887B921EE05970020CB1D /* plus_ic@3x.png */; };
+		CDE887BC21EE061D0020CB1D /* ratio_btn_unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE887BB21EE061D0020CB1D /* ratio_btn_unchecked@3x.png */; };
+		CDE887BE21EE06910020CB1D /* ratio_btn_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE887BD21EE06910020CB1D /* ratio_btn_checked@3x.png */; };
+		CDE887C121EF0F800020CB1D /* YCReloadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C021EF0F800020CB1D /* YCReloadType.swift */; };
+		CDE887C321EF26540020CB1D /* YCActionSheetPromoFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C221EF26540020CB1D /* YCActionSheetPromoFilterVC.swift */; };
+		CDE887C521EF276A0020CB1D /* YCPromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C421EF276A0020CB1D /* YCPromoView.swift */; };
+		CDE887C721EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C621EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift */; };
+		CDE887C921EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */; };
+		CDE887CB21EF749B0020CB1D /* YCTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CA21EF749B0020CB1D /* YCTagButton.swift */; };
+		CDE887CD21EF75F20020CB1D /* YCPromoFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */; };
+		CDE887CF21EF7DF60020CB1D /* YCItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD00348D21E8B78E0078810C /* YCActionSheets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YCActionSheets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD00349021E8B78E0078810C /* YCActionSheets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCActionSheets.h; sourceTree = "<group>"; };
 		CD00349121E8B78E0078810C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD00349821E8B8820078810C /* YCActionSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetVC.swift; sourceTree = "<group>"; };
+		CD00349A21E8BDA70078810C /* YCActionSheetDatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetDatePickerVC.swift; sourceTree = "<group>"; };
+		CDE84AB421F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetTextPickerVC.swift; sourceTree = "<group>"; };
+		CDE84AB621F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetTextPickerDelegate.swift; sourceTree = "<group>"; };
+		CDE84AB821F1C45400F63AC3 /* YCTextPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTextPickerView.swift; sourceTree = "<group>"; };
+		CDE8878A21E8C0100020CB1D /* YCDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCDatePickerView.swift; sourceTree = "<group>"; };
+		CDE8878C21E8C0570020CB1D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CDE8878E21E8C2060020CB1D /* YCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCButton.swift; sourceTree = "<group>"; };
+		CDE8879021E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetDatePickerDelegate.swift; sourceTree = "<group>"; };
+		CDE8879221E8C7970020CB1D /* YCActionSheetSelectFilialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetSelectFilialVC.swift; sourceTree = "<group>"; };
+		CDE8879821E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetSelectFilialDelegate.swift; sourceTree = "<group>"; };
+		CDE8879A21E8CB6E0020CB1D /* YCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCView.swift; sourceTree = "<group>"; };
+		CDE8879C21E8D1EC0020CB1D /* YCSelectFilialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCSelectFilialView.swift; sourceTree = "<group>"; };
+		CDE887A221EC90100020CB1D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CDE887A421EC95A80020CB1D /* YCSelectFilialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCSelectFilialCell.swift; sourceTree = "<group>"; };
+		CDE887B921EE05970020CB1D /* plus_ic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus_ic@3x.png"; sourceTree = "<group>"; };
+		CDE887BB21EE061D0020CB1D /* ratio_btn_unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ratio_btn_unchecked@3x.png"; sourceTree = "<group>"; };
+		CDE887BD21EE06910020CB1D /* ratio_btn_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ratio_btn_checked@3x.png"; sourceTree = "<group>"; };
+		CDE887C021EF0F800020CB1D /* YCReloadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCReloadType.swift; sourceTree = "<group>"; };
+		CDE887C221EF26540020CB1D /* YCActionSheetPromoFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetPromoFilterVC.swift; sourceTree = "<group>"; };
+		CDE887C421EF276A0020CB1D /* YCPromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCPromoView.swift; sourceTree = "<group>"; };
+		CDE887C621EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetPromoFilterDelegate.swift; sourceTree = "<group>"; };
+		CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCLeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		CDE887CA21EF749B0020CB1D /* YCTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTagButton.swift; sourceTree = "<group>"; };
+		CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCPromoFilterCell.swift; sourceTree = "<group>"; };
+		CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCItemProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +98,76 @@
 		CD00348F21E8B78E0078810C /* YCActionSheets */ = {
 			isa = PBXGroup;
 			children = (
+				CDE84AB321F1C1AE00F63AC3 /* TextPicker */,
+				CDE887BF21EE2B3D0020CB1D /* PromoFilter */,
+				CDE887AE21EE03C90020CB1D /* Resources */,
+				CDE8879521E8C8350020CB1D /* SelectFilial */,
+				CDE8879421E8C8030020CB1D /* DatePicker */,
 				CD00349021E8B78E0078810C /* YCActionSheets.h */,
 				CD00349121E8B78E0078810C /* Info.plist */,
+				CD00349821E8B8820078810C /* YCActionSheetVC.swift */,
+				CDE887A221EC90100020CB1D /* Utils.swift */,
+				CDE8878C21E8C0570020CB1D /* UIView+Extensions.swift */,
+				CDE8878E21E8C2060020CB1D /* YCButton.swift */,
+				CDE8879A21E8CB6E0020CB1D /* YCView.swift */,
 			);
 			path = YCActionSheets;
+			sourceTree = "<group>";
+		};
+		CDE84AB321F1C1AE00F63AC3 /* TextPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CDE84AB421F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift */,
+				CDE84AB621F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift */,
+				CDE84AB821F1C45400F63AC3 /* YCTextPickerView.swift */,
+			);
+			path = TextPicker;
+			sourceTree = "<group>";
+		};
+		CDE8879421E8C8030020CB1D /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CDE8879021E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift */,
+				CD00349A21E8BDA70078810C /* YCActionSheetDatePickerVC.swift */,
+				CDE8878A21E8C0100020CB1D /* YCDatePickerView.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		CDE8879521E8C8350020CB1D /* SelectFilial */ = {
+			isa = PBXGroup;
+			children = (
+				CDE8879221E8C7970020CB1D /* YCActionSheetSelectFilialVC.swift */,
+				CDE8879821E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift */,
+				CDE8879C21E8D1EC0020CB1D /* YCSelectFilialView.swift */,
+				CDE887A421EC95A80020CB1D /* YCSelectFilialCell.swift */,
+				CDE887C021EF0F800020CB1D /* YCReloadType.swift */,
+			);
+			path = SelectFilial;
+			sourceTree = "<group>";
+		};
+		CDE887AE21EE03C90020CB1D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDE887B921EE05970020CB1D /* plus_ic@3x.png */,
+				CDE887BB21EE061D0020CB1D /* ratio_btn_unchecked@3x.png */,
+				CDE887BD21EE06910020CB1D /* ratio_btn_checked@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDE887BF21EE2B3D0020CB1D /* PromoFilter */ = {
+			isa = PBXGroup;
+			children = (
+				CDE887C621EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift */,
+				CDE887C221EF26540020CB1D /* YCActionSheetPromoFilterVC.swift */,
+				CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */,
+				CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */,
+				CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */,
+				CDE887C421EF276A0020CB1D /* YCPromoView.swift */,
+				CDE887CA21EF749B0020CB1D /* YCTagButton.swift */,
+			);
+			path = PromoFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +213,7 @@
 				TargetAttributes = {
 					CD00348C21E8B78E0078810C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -120,6 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE887BE21EE06910020CB1D /* ratio_btn_checked@3x.png in Resources */,
+				CDE887BC21EE061D0020CB1D /* ratio_btn_unchecked@3x.png in Resources */,
+				CDE887BA21EE05970020CB1D /* plus_ic@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +252,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE887CB21EF749B0020CB1D /* YCTagButton.swift in Sources */,
+				CDE887C121EF0F800020CB1D /* YCReloadType.swift in Sources */,
+				CD00349B21E8BDA70078810C /* YCActionSheetDatePickerVC.swift in Sources */,
+				CDE887C721EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift in Sources */,
+				CDE887C921EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift in Sources */,
+				CDE84AB921F1C45400F63AC3 /* YCTextPickerView.swift in Sources */,
+				CDE887C321EF26540020CB1D /* YCActionSheetPromoFilterVC.swift in Sources */,
+				CDE8879921E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift in Sources */,
+				CDE8878F21E8C2060020CB1D /* YCButton.swift in Sources */,
+				CDE887CF21EF7DF60020CB1D /* YCItemProtocol.swift in Sources */,
+				CDE8879121E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift in Sources */,
+				CDE8878B21E8C0100020CB1D /* YCDatePickerView.swift in Sources */,
+				CDE84AB721F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift in Sources */,
+				CDE8879D21E8D1EC0020CB1D /* YCSelectFilialView.swift in Sources */,
+				CDE887CD21EF75F20020CB1D /* YCPromoFilterCell.swift in Sources */,
+				CDE84AB521F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift in Sources */,
+				CDE887C521EF276A0020CB1D /* YCPromoView.swift in Sources */,
+				CDE8879B21E8CB6E0020CB1D /* YCView.swift in Sources */,
+				CDE887A321EC90100020CB1D /* Utils.swift in Sources */,
+				CDE887A521EC95A80020CB1D /* YCSelectFilialCell.swift in Sources */,
+				CDE8879321E8C7970020CB1D /* YCActionSheetSelectFilialVC.swift in Sources */,
+				CDE8878D21E8C0570020CB1D /* UIView+Extensions.swift in Sources */,
+				CD00349921E8B8820078810C /* YCActionSheetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +406,7 @@
 		CD00349621E8B78E0078810C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -269,6 +415,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = YCActionSheets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -277,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tfm.YCActionSheets;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +433,7 @@
 		CD00349721E8B78E0078810C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -293,6 +442,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = YCActionSheets/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
