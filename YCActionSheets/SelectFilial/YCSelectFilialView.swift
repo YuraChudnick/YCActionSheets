@@ -28,7 +28,7 @@ public class YCSelectFilialView: YCView {
         didSet {
             addButtonBottomConstaint.constant = addButtonInsets.bottom
             addButtonLeftConstaint.constant = addButtonInsets.left
-            addButtonLeftConstaint.constant = addButtonInsets.right
+            addButtonRightConstaint.constant = -addButtonInsets.right
         }
     }
     
@@ -54,7 +54,7 @@ public class YCSelectFilialView: YCView {
             tableViewTopConstaint.constant = tableViewInsets.top
             tableViewBottomConstaint.constant = tableViewInsets.bottom
             tableViewLeftConstaint.constant = tableViewInsets.left
-            tableViewRightConstaint.constant = tableViewInsets.right
+            tableViewRightConstaint.constant = -tableViewInsets.right
         }
     }
     
@@ -67,7 +67,7 @@ public class YCSelectFilialView: YCView {
         didSet {
             titleLabelTopConstaint.constant = titleLabelInsets.top
             titleLabelLeftConstaint.constant = titleLabelInsets.left
-            titleLabelLeftConstaint.constant = titleLabelInsets.right
+            titleLabelRightConstaint.constant = -titleLabelInsets.right
         }
     }
     
@@ -103,7 +103,7 @@ public class YCSelectFilialView: YCView {
         addButton.translatesAutoresizingMaskIntoConstraints = false
         
         addButtonLeftConstaint = addButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: addButtonInsets.left)
-        addButtonRightConstaint = addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: addButtonInsets.right)
+        addButtonRightConstaint = addButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -addButtonInsets.right)
         addButtonBottomConstaint = addButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -addButtonInsets.bottom)
         addButtonHeightConstaint = addButton.heightAnchor.constraint(equalToConstant: addButtonHeight)
         
@@ -159,6 +159,10 @@ public class YCSelectFilialView: YCView {
     
     @objc private func didTapAddButton(_ sender: UIButton) {
         addButtonCallback.map({ $0() })
+    }
+    
+    public func setTitleAddButton(with title: String) {
+        addButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .light), NSAttributedString.Key.foregroundColor : UIColor.darkText]), for: .normal)
     }
     
 }

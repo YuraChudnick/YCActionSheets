@@ -12,8 +12,10 @@ public class YCActionSheetTextPickerVC: YCActionSheetVC {
     
     public weak var delegate: YCActionSheetTextPickerDelegate?
     
+    /// Content view
     public let textPickerView: YCTextPickerView = YCTextPickerView()
     
+    /// Customize text picker title with NSAttributedString
     public var textPickerTitleParameters: [NSAttributedString.Key : Any] = [ : ]
     
     public var textPickerRowHeight: CGFloat = 35

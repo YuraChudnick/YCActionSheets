@@ -16,7 +16,7 @@ public class YCActionSheetDatePickerVC: YCActionSheetVC {
     /// Callback to handle selected date.
     public var callback: ((Date) -> Void)?
 
-    /// View with titleLabel, datePicker and selectButton.
+    /// Content view with titleLabel, datePicker and selectButton.
     public let datePickerView = YCDatePickerView()
 
     override public func viewDidLoad() {

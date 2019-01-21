@@ -29,8 +29,8 @@ public class YCView: UIView {
     public var actionButtonInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10) {
         didSet {
             actionButtonLeftConstraint.constant = actionButtonInsets.left
-            actionButtonRightConstraint.constant = actionButtonInsets.right
-            actionButtonBottomConstraint.constant = actionButtonInsets.bottom
+            actionButtonRightConstraint.constant = -actionButtonInsets.right
+            actionButtonBottomConstraint.constant = -actionButtonInsets.bottom
         }
     }
     
@@ -60,9 +60,9 @@ public class YCView: UIView {
     public var contentViewInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10) {
         didSet {
             contentViewLeftConstraint.constant = contentViewInsets.left
-            contentViewRightConstraint.constant = contentViewInsets.right
+            contentViewRightConstraint.constant = -contentViewInsets.right
             contentViewTopConstraint.constant = contentViewInsets.top
-            contentViewBottomConstraint.constant = contentViewInsets.bottom
+            contentViewBottomConstraint.constant = -contentViewInsets.bottom
         }
     }
     

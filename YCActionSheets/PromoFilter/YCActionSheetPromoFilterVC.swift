@@ -83,33 +83,22 @@ public class YCActionSheetPromoFilterVC: YCActionSheetVC {
 extension YCActionSheetPromoFilterVC: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return delegate?.getItems?().count ?? (delegate?.getSItems?().count ?? 0)
+        return delegate?.getItems().count ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! YCPromoFilterCell
         cell.tagButton.selectedColor = tagButtonSelectedColor
         cell.tagButton.unselectedColor = tagButtonUnselectedColor
-        if let item = delegate?.getItems?()[indexPath.row] {
-            cell.setTagButtonTitle(item.getItemName())
-            cell.setTagButtonSelected(item.isSelected(), animated: false)
-            cell.callback = { [weak self] isSelected in
-                item.selected(value: isSelected)
-                self?.delegate.map({ isSelected ? $0.didSelectItem(at: indexPath) : $0.didDeselectItem(at: indexPath) })
-            }
-        } else if let item = delegate?.getSItems?()[indexPath.row] {
-            cell.setTagButtonTitle(item)
-            if let selectedItems = delegate?.getSelectedSItems?() {
-                cell.setTagButtonSelected(selectedItems.contains(item), animated: false)
-            } else {
-                cell.setTagButtonSelected(false, animated: false)
-            }
-            cell.callback = { [weak self] isSelected in
-                self?.delegate.map({ isSelected ? $0.didSelectItem(at: indexPath) : $0.didDeselectItem(at: indexPath) })
-            }
+        let item = delegate?.getItems()[indexPath.row] ?? ""
+        cell.setTagButtonTitle(item)
+        if let selectedItems = delegate?.getSelectedItems() {
+            cell.setTagButtonSelected(selectedItems.contains(indexPath.row), animated: false)
         } else {
-            cell.setTagButtonTitle("")
             cell.setTagButtonSelected(false, animated: false)
+        }
+        cell.callback = { [weak self] isSelected in
+            self?.delegate.map({ isSelected ? $0.didSelectItem(at: indexPath) : $0.didDeselectItem(at: indexPath) })
         }
         cell.tagButton.setNeedsDisplay() // it's for many rows, when cell reuse, we will need to redraw button
         return cell

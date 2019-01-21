@@ -32,7 +32,7 @@ public class YCPromoView: YCView {
     public var resetButtonInsets: UIEdgeInsets = UIEdgeInsets(top: 7, left: 0, bottom: 0, right: 21) {
         didSet {
             resetButtonTopConstraint.constant = resetButtonInsets.top
-            resetButtonRightConstraint.constant = resetButtonInsets.right
+            resetButtonRightConstraint.constant = -resetButtonInsets.right
         }
     }
     
@@ -48,7 +48,17 @@ public class YCPromoView: YCView {
         return cv
     }()
     
-    public var collectionViewInsets: UIEdgeInsets = .zero
+    public var collectionViewInsets: UIEdgeInsets = .zero {
+        didSet {
+            collectionViewTopConstaint.constant = collectionViewInsets.top
+            collectionViewLeftConstaint.constant = collectionViewInsets.left
+            collectionViewRightConstaint.constant = -collectionViewInsets.right
+        }
+    }
+    
+    private var collectionViewTopConstaint: NSLayoutConstraint!
+    private var collectionViewRightConstaint: NSLayoutConstraint!
+    private var collectionViewLeftConstaint: NSLayoutConstraint!
     
     var collectionViewHeight: CGFloat = 0 {
         didSet {
@@ -95,10 +105,14 @@ public class YCPromoView: YCView {
         contentView.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([collectionView.topAnchor.constraint(equalTo: resetButton.bottomAnchor, constant: collectionViewInsets.top),
+        
+        collectionViewTopConstaint = collectionView.topAnchor.constraint(equalTo: resetButton.bottomAnchor, constant: collectionViewInsets.top)
+        collectionViewLeftConstaint = collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: collectionViewInsets.left)
+        collectionViewRightConstaint = collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -collectionViewInsets.right)
+        
+        NSLayoutConstraint.activate([ collectionViewTopConstaint,
                                      //collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -collectionViewInsets.bottom),
-                                     collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: collectionViewInsets.left),
-                                     collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -collectionViewInsets.right)])
+                                     collectionViewLeftConstaint, collectionViewRightConstaint])
         
     }
     
@@ -117,6 +131,10 @@ public class YCPromoView: YCView {
     
     @objc private func resetButtonPressed(_ sender: UIButton) {
         ressetButtonCallback.map({ $0() })
+    }
+    
+    public func setTitleResetButton(with title: String) {
+        resetButton.setAttributedTitle(NSAttributedString(string: title, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .regular), NSAttributedString.Key.foregroundColor : UIColor.darkGray]), for: .normal)
     }
     
 }

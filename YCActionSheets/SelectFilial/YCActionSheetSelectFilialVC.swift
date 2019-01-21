@@ -14,6 +14,7 @@ public class YCActionSheetSelectFilialVC: YCActionSheetVC {
 
     public weak var delegate: YCActionSheetSelectFilialDelegate?
     
+    /// Content view
     public let selectFilialView = YCSelectFilialView()
     
     public var checkedImage: UIImage = Utils.imageNamed("ratio_btn_checked")

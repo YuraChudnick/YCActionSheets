@@ -19,7 +19,7 @@ public class YCActionSheetVC: UIViewController {
     
     var standardSpacing: CGFloat = 60
     
-    public let conteinerView: UIView = UIView()
+    let conteinerView: UIView = UIView()
     private var conteinerViewHeight: CGFloat = 380
     private var conteinerViewHeightConstraint: NSLayoutConstraint!
     

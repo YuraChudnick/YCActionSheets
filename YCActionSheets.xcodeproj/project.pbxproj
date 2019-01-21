@@ -33,7 +33,6 @@
 		CDE887C921EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */; };
 		CDE887CB21EF749B0020CB1D /* YCTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CA21EF749B0020CB1D /* YCTagButton.swift */; };
 		CDE887CD21EF75F20020CB1D /* YCPromoFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */; };
-		CDE887CF21EF7DF60020CB1D /* YCItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +64,6 @@
 		CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCLeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		CDE887CA21EF749B0020CB1D /* YCTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTagButton.swift; sourceTree = "<group>"; };
 		CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCPromoFilterCell.swift; sourceTree = "<group>"; };
-		CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCItemProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 			children = (
 				CDE887C621EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift */,
 				CDE887C221EF26540020CB1D /* YCActionSheetPromoFilterVC.swift */,
-				CDE887CE21EF7DF60020CB1D /* YCItemProtocol.swift */,
 				CDE887C821EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift */,
 				CDE887CC21EF75F20020CB1D /* YCPromoFilterCell.swift */,
 				CDE887C421EF276A0020CB1D /* YCPromoView.swift */,
@@ -261,7 +258,6 @@
 				CDE887C321EF26540020CB1D /* YCActionSheetPromoFilterVC.swift in Sources */,
 				CDE8879921E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift in Sources */,
 				CDE8878F21E8C2060020CB1D /* YCButton.swift in Sources */,
-				CDE887CF21EF7DF60020CB1D /* YCItemProtocol.swift in Sources */,
 				CDE8879121E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift in Sources */,
 				CDE8878B21E8C0100020CB1D /* YCDatePickerView.swift in Sources */,
 				CDE84AB721F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift in Sources */,
