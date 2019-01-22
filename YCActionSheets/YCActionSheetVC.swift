@@ -40,7 +40,7 @@ public class YCActionSheetVC: UIViewController {
     //MARK: - Setup presentation style
     
     fileprivate func setupPresentationStyle() {
-        modalPresentationStyle = .overCurrentContext
+        modalPresentationStyle = .overFullScreen
         modalTransitionStyle = .crossDissolve
     }
 
