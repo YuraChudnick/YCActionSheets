@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "YCActionSheets.podspec"
+  s.name         = "YCActionSheets"
   s.version      = "1.0.0"
   s.summary      = "Collection of custom action sheets"
 
@@ -12,13 +12,15 @@ Pod::Spec.new do |s|
 
   s.license       = { :type => "MIT", :file => "License.md" }
 
-  s.author             = { "Y.Chudnick" => "y.chudnovets@temabit.com" }
+  s.author        = { "Y.Chudnick" => "y.chudnovets@temabit.com" }
 
   s.platform      = :ios, "10.0"
 
-  s.source       = { :git => "https://github.com/YuraChudnick/YCActionSheets.git", :tag => s.version }
+  s.source        = { :git => "https://github.com/YuraChudnick/YCActionSheets.git", :tag => s.version }
 
-  s.source_files  = "YCActionSheets", "YCActionSheets/*.swift"
+  s.source_files  = "YCActionSheets", "YCActionSheets/*.swift", "YCActionSheets/**/*.swift"
+
+  s.resources = ["YCActionSheets/Resources/*.png"]
 
   s.swift_version = '4.2'
 

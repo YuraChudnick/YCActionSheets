@@ -11,7 +11,7 @@ import Foundation
 struct Utils {
     
     static func imageNamed(_ name: String) -> UIImage {
-        let cls = YCActionSheetSelectFilialVC.self
+        let cls = YCActionSheetVC.self
         var bundle = Bundle(for: cls)
         let traitCollection = UITraitCollection(displayScale: 3)
         
