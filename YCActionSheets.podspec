@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YCActionSheets"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Collection of custom action sheets"
 
   s.description  = "Collection of custom action sheets.  Instructions for installation
