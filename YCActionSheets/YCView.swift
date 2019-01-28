@@ -22,15 +22,13 @@ public class YCView: UIView {
     
     public var actionButtonHeight: CGFloat = 50 {
         didSet {
-            actionButtonHeightConstraint.constant = actionButtonHeight
+            updateActionButtonConstraint()
         }
     }
     
     public var actionButtonInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10) {
         didSet {
-            actionButtonLeftConstraint.constant = actionButtonInsets.left
-            actionButtonRightConstraint.constant = -actionButtonInsets.right
-            actionButtonBottomConstraint.constant = -actionButtonInsets.bottom
+            updateActionButtonConstraint()
         }
     }
     
@@ -39,11 +37,6 @@ public class YCView: UIView {
             actionButton.layer.cornerRadius = actionButtonCornerRadius
         }
     }
-    
-    private var actionButtonHeightConstraint: NSLayoutConstraint!
-    private var actionButtonLeftConstraint: NSLayoutConstraint!
-    private var actionButtonRightConstraint: NSLayoutConstraint!
-    private var actionButtonBottomConstraint: NSLayoutConstraint!
     
     public let contentView: UIView = {
         let v = UIView()
@@ -59,17 +52,9 @@ public class YCView: UIView {
     
     public var contentViewInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10) {
         didSet {
-            contentViewLeftConstraint.constant = contentViewInsets.left
-            contentViewRightConstraint.constant = -contentViewInsets.right
-            contentViewTopConstraint.constant = contentViewInsets.top
-            contentViewBottomConstraint.constant = -contentViewInsets.bottom
+            updateContentViewConstraints()
         }
     }
-    
-    private var contentViewLeftConstraint: NSLayoutConstraint!
-    private var contentViewRightConstraint: NSLayoutConstraint!
-    private var contentViewTopConstraint: NSLayoutConstraint!
-    private var contentViewBottomConstraint: NSLayoutConstraint!
     
     public let titleLabel: UILabel = {
         let l = UILabel()
@@ -94,35 +79,32 @@ public class YCView: UIView {
     }
     
     fileprivate func setupViews() {
-        addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.layer.cornerRadius = actionButtonCornerRadius
         actionButton.layer.masksToBounds = true
         actionButton.addTarget(self, action: #selector(didTapActionButton(_:)), for: .touchUpInside)
+        updateActionButtonConstraint()
         
-        actionButtonHeightConstraint = actionButton.heightAnchor.constraint(equalToConstant: actionButtonHeight)
-        actionButtonLeftConstraint = actionButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: actionButtonInsets.left)
-        actionButtonRightConstraint = actionButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -actionButtonInsets.right)
-        
-        if #available(iOS 11.0, *) {
-            actionButtonBottomConstraint = actionButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -actionButtonInsets.bottom)
-        } else {
-            actionButtonBottomConstraint = actionButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -actionButtonInsets.bottom)
-        }
-        
-        NSLayoutConstraint.activate([actionButtonHeightConstraint, actionButtonLeftConstraint, actionButtonRightConstraint, actionButtonBottomConstraint])
-        
-        addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.layer.cornerRadius = contentViewCornerRadius
         contentView.layer.masksToBounds = true
-        
-        contentViewTopConstraint = contentView.topAnchor.constraint(equalTo: topAnchor, constant: contentViewInsets.top)
-        contentViewLeftConstraint = contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentViewInsets.left)
-        contentViewRightConstraint = contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentViewInsets.right)
-        contentViewBottomConstraint = contentView.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -contentViewInsets.bottom)
-        
-        NSLayoutConstraint.activate([contentViewTopConstraint, contentViewLeftConstraint, contentViewRightConstraint, contentViewBottomConstraint])
+        updateContentViewConstraints()
+    }
+    
+    fileprivate func updateActionButtonConstraint() {
+        if actionButton.superview != nil { actionButton.removeFromSuperview() }
+        addSubview(actionButton)
+        if #available(iOS 11.0, *) {
+            actionButton.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: actionButtonInsets, size: CGSize(width: 0, height: actionButtonHeight))
+        } else {
+            actionButton.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: actionButtonInsets, size: CGSize(width: 0, height: actionButtonHeight))
+        }
+    }
+    
+    fileprivate func updateContentViewConstraints() {
+        if contentView.superview != nil { contentView.removeFromSuperview() }
+        addSubview(contentView)
+        contentView.anchor(top: topAnchor, leading: leadingAnchor, bottom: actionButton.topAnchor, trailing: trailingAnchor, padding: contentViewInsets)
     }
     
     @objc func didTapActionButton(_ sender: UIButton) {

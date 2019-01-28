@@ -44,12 +44,7 @@ public class YCButton: UIControl {
     private func setupViews() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([titleLabel.widthAnchor.constraint(equalTo: widthAnchor),
-                                     titleLabel.heightAnchor.constraint(equalTo: heightAnchor),
-                                     titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-                                     titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)])
-        
-        
+        titleLabel.fillSuperview()
         addTarget(self, action: #selector(touchDown), for: [.touchDown, .touchDragEnter])
         addTarget(self, action: #selector(touchUp), for: [.touchUpInside, .touchDragExit, .touchCancel])
     }
