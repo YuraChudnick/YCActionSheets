@@ -79,13 +79,11 @@ public class YCView: UIView {
     }
     
     fileprivate func setupViews() {
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.layer.cornerRadius = actionButtonCornerRadius
         actionButton.layer.masksToBounds = true
         actionButton.addTarget(self, action: #selector(didTapActionButton(_:)), for: .touchUpInside)
         updateActionButtonConstraint()
         
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.layer.cornerRadius = contentViewCornerRadius
         contentView.layer.masksToBounds = true
         updateContentViewConstraints()

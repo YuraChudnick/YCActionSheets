@@ -10,6 +10,8 @@
 		CD00349221E8B78E0078810C /* YCActionSheets.h in Headers */ = {isa = PBXBuildFile; fileRef = CD00349021E8B78E0078810C /* YCActionSheets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD00349921E8B8820078810C /* YCActionSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00349821E8B8820078810C /* YCActionSheetVC.swift */; };
 		CD00349B21E8BDA70078810C /* YCActionSheetDatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00349A21E8BDA70078810C /* YCActionSheetDatePickerVC.swift */; };
+		CDA160AF22085AF5009265F7 /* PresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA160AE22085AF5009265F7 /* PresentAnimationController.swift */; };
+		CDA160B122085B1C009265F7 /* DismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA160B022085B1C009265F7 /* DismissAnimationController.swift */; };
 		CDE84AB521F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB421F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift */; };
 		CDE84AB721F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB621F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift */; };
 		CDE84AB921F1C45400F63AC3 /* YCTextPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE84AB821F1C45400F63AC3 /* YCTextPickerView.swift */; };
@@ -41,6 +43,8 @@
 		CD00349121E8B78E0078810C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD00349821E8B8820078810C /* YCActionSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetVC.swift; sourceTree = "<group>"; };
 		CD00349A21E8BDA70078810C /* YCActionSheetDatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetDatePickerVC.swift; sourceTree = "<group>"; };
+		CDA160AE22085AF5009265F7 /* PresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimationController.swift; sourceTree = "<group>"; };
+		CDA160B022085B1C009265F7 /* DismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimationController.swift; sourceTree = "<group>"; };
 		CDE84AB421F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetTextPickerVC.swift; sourceTree = "<group>"; };
 		CDE84AB621F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCActionSheetTextPickerDelegate.swift; sourceTree = "<group>"; };
 		CDE84AB821F1C45400F63AC3 /* YCTextPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTextPickerView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		CD00348F21E8B78E0078810C /* YCActionSheets */ = {
 			isa = PBXGroup;
 			children = (
+				CDA160AD22085ABD009265F7 /* Animation controllers */,
 				CDE84AB321F1C1AE00F63AC3 /* TextPicker */,
 				CDE887BF21EE2B3D0020CB1D /* PromoFilter */,
 				CDE887AE21EE03C90020CB1D /* Resources */,
@@ -110,6 +115,15 @@
 				CDE8879A21E8CB6E0020CB1D /* YCView.swift */,
 			);
 			path = YCActionSheets;
+			sourceTree = "<group>";
+		};
+		CDA160AD22085ABD009265F7 /* Animation controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDA160AE22085AF5009265F7 /* PresentAnimationController.swift */,
+				CDA160B022085B1C009265F7 /* DismissAnimationController.swift */,
+			);
+			path = "Animation controllers";
 			sourceTree = "<group>";
 		};
 		CDE84AB321F1C1AE00F63AC3 /* TextPicker */ = {
@@ -255,12 +269,14 @@
 				CDE887C721EF724A0020CB1D /* YCActionSheetPromoFilterDelegate.swift in Sources */,
 				CDE887C921EF72D60020CB1D /* YCLeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				CDE84AB921F1C45400F63AC3 /* YCTextPickerView.swift in Sources */,
+				CDA160B122085B1C009265F7 /* DismissAnimationController.swift in Sources */,
 				CDE887C321EF26540020CB1D /* YCActionSheetPromoFilterVC.swift in Sources */,
 				CDE8879921E8C9970020CB1D /* YCActionSheetSelectFilialDelegate.swift in Sources */,
 				CDE8878F21E8C2060020CB1D /* YCButton.swift in Sources */,
 				CDE8879121E8C2460020CB1D /* YCActionSheetDatePickerDelegate.swift in Sources */,
 				CDE8878B21E8C0100020CB1D /* YCDatePickerView.swift in Sources */,
 				CDE84AB721F1C3E400F63AC3 /* YCActionSheetTextPickerDelegate.swift in Sources */,
+				CDA160AF22085AF5009265F7 /* PresentAnimationController.swift in Sources */,
 				CDE8879D21E8D1EC0020CB1D /* YCSelectFilialView.swift in Sources */,
 				CDE887CD21EF75F20020CB1D /* YCPromoFilterCell.swift in Sources */,
 				CDE84AB521F1C23200F63AC3 /* YCActionSheetTextPickerVC.swift in Sources */,
